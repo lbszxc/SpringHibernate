@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="pojo.Emp" table="emp" schema="myemp">
+        <id name="empno">
+            <column name="empno" sql-type="int(4)"/>
+            <generator class="native"/>
+        </id>
+        <property name="ename">
+            <column name="ename" sql-type="varchar(8)" length="8" not-null="true"/>
+        </property>
+        <property name="job">
+            <column name="job" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="mar">
+            <column name="mar" sql-type="int(10)" not-null="true"/>
+        </property>
+        <property name="hiredate">
+            <column name="hiredate" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="sal">
+            <column name="sal" sql-type="int(8)" not-null="true"/>
+        </property>
+        <property name="comm">
+            <column name="comm" sql-type="int(8)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
